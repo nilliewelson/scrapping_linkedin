@@ -5,8 +5,8 @@ from selenium import webdriver
 
 browser = webdriver.Chrome("/home/nilliewelson/Desktop/USER/Web Scraping/scrapping_linkedin/chromedriver")
 browser.get("https://www.linkedin.com/login/")
-file = open("config.txt")
-lines = file.readlines()
+with open("config.txt", "r") as  file :
+  lines = file.readlines()
 username = lines[0]
 password = lines[1]
 
